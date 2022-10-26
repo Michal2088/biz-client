@@ -28,14 +28,12 @@ const NewCard: FunctionComponent<NewCardProps> = () => {
       bizImage: Yup.string().required(),
     }),
     onSubmit: (values: Card, { resetForm }) => {
-      console.log(values);
       addCard(values)
         .then(() => {
           successMsg("card add successfully");
           navigate("/AllCards");
         })
         .catch((err) => {
-          console.log(err.response.data);
           errorMsg(err.response.data);
           resetForm();
         });

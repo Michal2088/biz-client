@@ -24,7 +24,6 @@ const Login: FunctionComponent<LoginProps> = () => {
         .required("Required"),
     }),
     onSubmit: (values: User, { resetForm }) => {
-      console.log(values);
       checkUser(values)
         .then((result) => {
           sessionStorage.setItem("token", result.data.token);
@@ -34,7 +33,6 @@ const Login: FunctionComponent<LoginProps> = () => {
         .catch((err) => {
           resetForm();
           errorMsg(err.response.data);
-          console.log(err.response.data);
           
           
         });

@@ -51,7 +51,6 @@ const EditCard: FunctionComponent<EditCardProps> = () => {
           navigate("/MyCards");
         })
         .catch((err) => {
-          console.log(err.response.data);
           errorMsg(err.response.data);
           resetForm();
         });

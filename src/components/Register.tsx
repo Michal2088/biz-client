@@ -33,7 +33,6 @@ const Register: FunctionComponent<RegisterProps> = ({ biz, text, img }) => {
       let user: User = { ...values, biz: biz };
       addUser(user)
         .then((result) => {
-          console.log(result.data);
           sessionStorage.setItem("token", result.data.token);
           successMsg("you register successfully");
           if (biz) {
@@ -43,7 +42,6 @@ const Register: FunctionComponent<RegisterProps> = ({ biz, text, img }) => {
           }
         })
         .catch((err) => {
-          console.log(err.response.data);
           errorMsg(err.response.data);
           resetForm();
         });

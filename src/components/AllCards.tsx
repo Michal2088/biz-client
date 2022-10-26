@@ -1,4 +1,4 @@
-import { FormEvent, FunctionComponent, useEffect, useState } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { Card } from "../interfaces/Card";
 import { getAllCards } from "../services/cardsService";
 import Footer from "./Footer";

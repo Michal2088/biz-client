@@ -26,7 +26,6 @@ const MyCards: FunctionComponent<MyCardsProps> = () => {
           setIsChanged(!isChanged);
         })
         .catch((err) => {
-          console.log(err.response.data);
           errorMsg(err.response.data);
         });
     }
